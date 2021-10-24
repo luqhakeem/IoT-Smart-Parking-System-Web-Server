@@ -7,7 +7,7 @@
  }  
  if(isset($_POST["register"]))  
  {  
-      if(empty($_POST["username"]) || empty($_POST["email"]) || empty($_POST["full_name"]) || empty($_POST["phone_number"]) || empty($_POST["password"]) || empty($_POST["cpassword"]))  
+      if(empty($_POST["username"]) || empty($_POST["email"]) || empty($_POST["fullname"]) || empty($_POST["phone_num"]) || empty($_POST["password"]) || empty($_POST["cpassword"]))  
       {  
            echo '<script>alert("All fields are required")</script>';  
       }
@@ -19,11 +19,11 @@
       {  
            $username = mysqli_real_escape_string($connect, $_POST["username"]);
 		   $email = mysqli_real_escape_string($connect, $_POST["email"]);
-		   $full_name = mysqli_real_escape_string($connect, $_POST["full_name"]);
-		   $phone_number = mysqli_real_escape_string($connect, $_POST["phone_number"]);		   
+		   $fullname = mysqli_real_escape_string($connect, $_POST["fullname"]);
+		   $phone_num = mysqli_real_escape_string($connect, $_POST["phone_num"]);		   
            $password = mysqli_real_escape_string($connect, $_POST["password"]);		   
            $password = md5($password);	   
-           $query = "INSERT INTO user (username, password, email, full_name, phone_number) VALUES('$username', '$password', '$email', '$full_name', '$phone_number')";  
+           $query = "INSERT INTO user (username, password, email, fullname, phone_num) VALUES('$username', '$password', '$email', '$fullname', '$phone_num')";  
            if(mysqli_query($connect, $query))  
            {  
                 echo '<script>alert("Registration Done")</script>';  
@@ -82,10 +82,10 @@
 						<input type="email" name="email" class="form-control" required>  
                      <br />
 					 <label>Full Name</label>  
-						<input type="text" name="full_name" class="form-control" required>  
+						<input type="text" name="fullname" class="form-control" required>  
                      <br />
 					 <label>Phone Number</label>  
-						<input type="number" name="phone_number" class="form-control" required>  
+						<input type="number" name="phone_num" class="form-control" required>  
                      <br />					 
                      <label>Password</label>  
 						<input type="password" name="password" class="form-control" required>  
