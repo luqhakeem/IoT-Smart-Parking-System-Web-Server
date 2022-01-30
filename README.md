@@ -22,7 +22,9 @@ git clone https://github.com/luqhakeem/IoT-Smart-Parking-System-Web-Server.git
 ## Result
 
 Index Page
+
 ![Index Page](https://user-images.githubusercontent.com/75708244/151705354-656339f9-833c-40a4-ae3c-2d02d36ea8f4.jpg)
 
 Sensor Data
+
 ![Sensor Data](https://user-images.githubusercontent.com/75708244/151705369-99f1ac90-3e81-4f64-acbb-69f6e7552bd9.jpg)
