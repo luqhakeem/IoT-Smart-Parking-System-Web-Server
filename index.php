@@ -53,17 +53,31 @@
                 echo '<script>alert("Wrong User Details")</script>';  
            }  
       }  
- }  
+ }
+ 
+ 
  ?>  
  <!DOCTYPE html>  
- <html>  
+ <html>
       <head>  
-           <title>IoT Smart Parking System - Index</title>  
+           <title>IoT Smart Parking System - Index</title>
+		   <meta name="viewport" content="width=device-width, initial-scale=1.0">
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
-           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		   <link rel="manifest" href="manifest.json" />
+		   <!-- iOS support -->
+		   <link rel="apple-touch-icon" href="images/icons/72.png" />
+		   <link rel="apple-touch-icon" href="images/icons/96.png" />
+		   <link rel="apple-touch-icon" href="images/icons/128.png" />
+		   <link rel="apple-touch-icon" href="images/icons/144.png" />
+		   <link rel="apple-touch-icon" href="images/icons/152.png" />
+		   <link rel="apple-touch-icon" href="images/icons/192.png" />
+		   <link rel="apple-touch-icon" href="images/icons/384.png" />
+		   <link rel="apple-touch-icon" href="images/icons/512.png" />
       </head>  
-      <body>  
+      <body>
+		   <script src="/js/app.js"></script>
            <br /><br />  
            <div class="container" style="width:500px;">  
                 <h3 align="center">IoT Smart Parking System</h3>  
