@@ -1,6 +1,6 @@
 # IoT Smart Parking System (Web Server)
 
-A simple system with basic user authentication to read and list down all the vacant parking lot and receive data from **Arduino** MCU.
+A simple system with basic user authentication using md5() password encryption to read and list down all the vacant parking lot and receive data from **Arduino** MCU.
 
 Based on **PHP** and **MySQL** database.
 
