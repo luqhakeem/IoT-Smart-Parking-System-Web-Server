@@ -1,5 +1,8 @@
-<?php  
- $connect = mysqli_connect("localhost", "root", "luq123", "iot_parking");  
+<?php
+
+ require 'connect.php';
+ 
+ $connect = mysqli_connect($host, $username, $password, $dbname); 
  session_start();  
  if(isset($_SESSION["username"]))  
  {  

@@ -1,15 +1,11 @@
 <?php
 
-$servername = "localhost";
-$dbname = "iot_parking";
-$username = "root";
-$password = "luq123";
-
-$api_key_value = "tPmAT5Ab3j7F9";
-
-$api_key= $lot = $level = $isavailable = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+ require 'connect.php';
+ 
+ $api_key_value = "tPmAT5Ab3j7F9";
+ 
+ $api_key= $lot = $level = $isavailable = "";
+ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $api_key = test_input($_GET["api_key"]);
     if($api_key == $api_key_value) {
         $lot = test_input($_GET["lot"]);
@@ -17,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $isavailable = test_input($_GET["isavailable"]);
         
         // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
+        $conn = new mysqli($host, $username, $password, $dbname);
         // Check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
@@ -37,15 +33,17 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     else {
         echo "Wrong API Key provided.";
     }
-
-}
-else {
+	}
+	
+ else {
     echo "No data posted with HTTP GET.";
-}
+ }
 
-function test_input($data) {
+ function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
-}
+ }
+
+?>
